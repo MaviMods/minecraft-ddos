@@ -169,7 +169,7 @@ def main():
 
     ip = input(Fore.LIGHTBLUE_EX + "Enter Minecraft server IP: ")
     port = validate_input("Enter port (default 25565): ", 1, 65535, default=25565)
-    duration = 1000
+    duration = 30
 
     if attack_type == "1":  # Layer 4 UDP
         print(Fore.LIGHTBLUE_EX + "\n🔹 Layer 4 UDP Methods 🔹")
