@@ -189,7 +189,7 @@ def main():
         print(Fore.LIGHTBLUE_EX + "\n🔹 Layer 4 TCP Methods 🔹")
         print("  1. TCP Connect  2. TCP Join  3. TCP Login")
         method = input(Fore.LIGHTBLUE_EX + "Select method (1-3): ").strip()
-        packet_size = validate_input("Enter packet size (1-65500): ", 1, 655000)
+        packet_size = validate_input("Enter packet size (1-65500): ", 1, 100000000000)
 
         methods = {
             "1": tcp_connect, "2": tcp_join, "3": tcp_login
