@@ -208,7 +208,7 @@ def main():
             "1": http_status_flood, "2": http_query_flood
         }
         if method in methods:
-            methods[method](ip, duration)
+            methods[method](ip, port, duration)
         else:
             print(Fore.RED + "[❌] Invalid HTTP method!")
 
